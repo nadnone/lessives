@@ -1,0 +1,23 @@
+{
+    "cout_par_credit": 0.5,
+    "programmes": [
+        {
+            "nom": "Lavage 60°",
+            "credits": 3,
+            "temps": 62,
+            "compteur": 30
+        },
+        {
+            "nom": "Lavage 30°", 
+            "credits": 2,
+            "temps": 40,
+            "compteur": 30
+        },
+        {
+            "nom": "Séchage plein",
+            "credits": 8,
+            "temps": 120,
+            "compteur": 16
+        }
+    ]
+}

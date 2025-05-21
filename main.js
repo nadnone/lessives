@@ -16,7 +16,7 @@ for (let i = 0; i < dataset.programmes.length; i++)
     content.innerText = `Temps: ${programme.temps} secondes (environ: ${(programme.temps/60).toPrecision(1)} heure(s) )
     Coûts: ${dataset.cout_par_credit * programme.credits} CHF
     Crédit nécessaires: ${programme.credits} Unité(s) de décomptes à ${programme.compteur} secondes
-    Reste: ${Math.ceil(programme.compteur*programme.credits) - programme.temps } seconde(s) réstante(s)
+    Reste: ${Math.ceil(programme.compteur*programme.credits) - programme.temps} seconde(s)
     `;
 
     const section = document.createElement("section");
@@ -28,3 +28,11 @@ for (let i = 0; i < dataset.programmes.length; i++)
 }
 
 document.querySelector("button").addEventListener("click", estimate)
+
+document.querySelector("#calculator").addEventListener("keypress", (e) => 
+{
+    if (e.code === "Enter")
+    {
+        estimate();
+    }
+});

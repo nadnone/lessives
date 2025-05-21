@@ -28,8 +28,6 @@ export function estimate() {
         t_program += + parseInt(matches[2]);
     }
 
-    console.log(t_program);
-
     const credit_needed = Math.ceil(t_program / t_per_credit) // credits
     const t_min = credit_needed * t_per_credit // sec
     const t_rest = t_min - t_program // sec
@@ -48,5 +46,3 @@ export function estimate() {
 
     estimator_section.appendChild(results_p);
 }
-
-estimate()

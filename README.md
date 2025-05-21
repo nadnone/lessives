@@ -15,7 +15,7 @@ Pour avoir une idée du coût d'une lessive par rapport au compteur et aux créd
 ### Les crédits se multiplient à des décomptes en fonction des machines. 
 
 <details>
-    <summary>Tableau des décopmptes</summary>
+    <summary>Tableau des décomptes</summary>
     
 |  Machines   |  Décomptes  |
 | ----------- | ----------- |

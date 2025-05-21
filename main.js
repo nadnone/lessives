@@ -1,5 +1,7 @@
 import dataset from './dataset.json' with { type: "json"}
-import { estimate } from './calculator.js';
+import { Calculator } from './calculator.js';
+
+const calculator = new Calculator();
 
 const body = document.body;
 
@@ -13,10 +15,10 @@ for (let i = 0; i < dataset.programmes.length; i++)
 
     const content = document.createElement("p");
 
-    content.innerText = `Temps: ${programme.temps} secondes (environ: ${(programme.temps/60).toPrecision(1)} heure(s) )
+    content.innerText = `Temps: ${programme.temps} minutes (environ: ${(programme.temps/60).toPrecision(1)} heure(s) )
     Coûts: ${dataset.cout_par_credit * programme.credits} CHF
-    Crédit nécessaires: ${programme.credits} Unité(s) de décomptes à ${programme.compteur} secondes
-    Reste: ${Math.ceil(programme.compteur*programme.credits) - programme.temps} seconde(s)
+    Crédit nécessaires: ${programme.credits} Unité(s) de décomptes à ${programme.compteur} minutes
+    Reste: ${Math.ceil(programme.compteur*programme.credits) - programme.temps} minutes(s)
     `;
 
     const section = document.createElement("section");
@@ -27,12 +29,12 @@ for (let i = 0; i < dataset.programmes.length; i++)
     
 }
 
-document.querySelector("button").addEventListener("click", estimate)
+document.querySelector("button").addEventListener("click", calculator.estimate)
 
 document.querySelector("#calculator").addEventListener("keypress", (e) => 
 {
     if (e.code === "Enter")
     {
-        estimate();
+        calculator.estimate();
     }
 });

@@ -1,5 +1,8 @@
 # Estimation du coût d'une lessive
 
+Credits: 
+- [PicoCss](./pico/LICENSE.md)
+
 Pour avoir une idée du coût d'une lessive par rapport au compteur et aux crédits
 
 <details>

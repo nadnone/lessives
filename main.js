@@ -1,13 +1,11 @@
-import dataset from './dataset.json' with { type: "json"}
-import { Calculator } from './calculator.js';
+import dataset from "./data/dataset.json" with { type: "json"}
+import { Calculator } from './class/Calculator.js';
 
 const calculator = new Calculator();
-
 const body = document.body;
 
 for (let i = 0; i < dataset.programmes.length; i++) 
 {
-
     const programme = dataset.programmes[i];
     
     const title = document.createElement("h3");
@@ -30,11 +28,4 @@ for (let i = 0; i < dataset.programmes.length; i++)
 }
 
 document.querySelector("button").addEventListener("click", calculator.estimate)
-
-document.querySelector("#calculator").addEventListener("keypress", (e) => 
-{
-    if (e.code === "Enter")
-    {
-        calculator.estimate();
-    }
-});
+document.querySelector("#calculator").addEventListener("keypress", (e) => e.code === "Enter" ? calculator.estimate() : null);

@@ -1,0 +1,6 @@
+{
+    "FORMAT": "[!] Mauvais Format d'écriture de la durée :/",
+    "EMPTY": "[!] Avez vous noté quelque chose ?",
+    "NEGATIVE": "[!] Seul les nombres supérieurs à 1 sont acceptés :(",
+    "ZEROS": "[!] Le compteur ne peut être égal à zéro"
+}

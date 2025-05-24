@@ -1,4 +1,7 @@
 export const ERRORS = {
-    format: 1,
-    empty: 2
+    NO_ERROR: 0,
+    FORMAT: 1,
+    EMPTY: 2,
+    NEGATIVE: 3,
+    RESET: 4
 }
